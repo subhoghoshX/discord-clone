@@ -15,6 +15,9 @@ module.exports = {
       },
       fontFamily: {
         'primary': ['Inter', 'ui-sans-serif', 'system-ui']
+      },
+      colors: {
+        transparent: 'transparent'
       }
     },
   },
