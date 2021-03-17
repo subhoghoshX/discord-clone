@@ -10,7 +10,7 @@ export function GenericBtn({text, leftIcon}: GenericBtnProps) {
         <button className="flex w-full items-center group px-3 py-1 rounded focus:outline-none hover:bg-[#2f2f2f]">
             {leftIcon}
             <span className="text-gray-400 ml-1 group-hover:text-white text-[15px]">{text}</span>
-            <svg className="inline-block ml-auto text-gray-500 group-hover:text-gray-300" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <svg className="inline-block ml-auto text-transparent group-hover:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
             <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
             <path fillRule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
             </svg>
