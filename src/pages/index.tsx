@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className="font-primary">
       <Head>
-        <title>Create Next App</title>
+        <title>Discord Clone build with tailwindcss & nextjs</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
