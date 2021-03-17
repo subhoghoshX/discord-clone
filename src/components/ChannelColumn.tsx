@@ -54,7 +54,7 @@ export default function ChannelColumn() {
                 <svg className="h-4 w-4 text-gray-500 group-hover:text-gray-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
                 </svg>
-                <span className="ml-1 uppercase text-gray-400 group-hover:text-gray-300 text-[11px] font-bold font-sans">tailwind css</span>
+                <span className="ml-1 uppercase text-gray-400 group-hover:text-gray-300 text-[11px] font-bold font-sans">tailwind labs</span>
               </button>
               <ChannelBtn text="tailwind-ui" />
               <ChannelBtn text="headless-ui" />
@@ -67,7 +67,7 @@ export default function ChannelColumn() {
                 <svg className="h-4 w-4 text-gray-500 group-hover:text-gray-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
                 </svg>
-                <span className="ml-1 uppercase text-gray-400 group-hover:text-gray-300 text-[11px] font-bold font-sans">tailwind css</span>
+                <span className="ml-1 uppercase text-gray-400 group-hover:text-gray-300 text-[11px] font-bold font-sans">off topic</span>
               </button>
               <ChannelBtn text="design" />
               <ChannelBtn text="development" />
@@ -79,7 +79,7 @@ export default function ChannelColumn() {
                 <svg className="h-4 w-4 text-gray-500 group-hover:text-gray-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
                 </svg>
-                <span className="ml-1 uppercase text-gray-400 group-hover:text-gray-300 text-[11px] font-bold font-sans">tailwind css</span>
+                <span className="ml-1 uppercase text-gray-400 group-hover:text-gray-300 text-[11px] font-bold font-sans">community</span>
               </button>
               <ChannelBtn text="job" />
               <ChannelBtn text="showcase" />
