@@ -1,14 +1,29 @@
-import Head from 'next/head'
+import Head from 'next/head';
+import { useEffect } from 'react';
+import ServerColumn from '../components/ServerColumn';
+import ChannelColumn from '../components/ChannelColumn';
 
 export default function Home() {
+  useEffect(() => {
+    document.addEventListener('contextmenu', (e) => {
+      e.preventDefault();
+    })
+  }, [])
+
   return (
-    <div>
+    <div className="font-primary">
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1 className="font-bold text-green-500">Hello World</h1>
+      <div className="grid grid-cols-[70px,240px,auto] h-screen">
+
+        <ServerColumn />
+        <ChannelColumn />
+
+        <div className="h-full bg-gray-700"></div>
+      </div>
 
     </div>
   )
