@@ -6,10 +6,10 @@
 
 @layer utilities {
     .fancy-scroll::-webkit-scrollbar {
-        width: 6px;
+        width: 4px;
     }
     .fancy-scroll:hover::-webkit-scrollbar-thumb {
-        @apply bg-gray-600
+        @apply bg-gray-600 rounded-full;
     }
     .fancy-scroll {
         scrollbar-color: transparent transparent;
