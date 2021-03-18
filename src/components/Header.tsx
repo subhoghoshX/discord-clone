@@ -29,7 +29,7 @@ export default function Header() {
                 <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
             </svg>
             </button>
-            <label className="w-36 relative">
+            <label className="w-36 focus-within:w-56 relative">
             <input className="block w-full bg-gray-900 rounded-md text-xs px-2 py-1 focus:outline-none text-gray-200" placeholder="Search" type="text" name="" id=""/>
             <span className="absolute inset-y-0 right-0 flex justify-center items-center px-2">
                 <svg className="h-3 w-3 text-gray-300" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
