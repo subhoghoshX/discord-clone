@@ -33,4 +33,11 @@
     .styled-scroll {
         scrollbar-color: theme('colors.gray[900]') theme('colors.gray[800]');
     }
+
+    .thin-scroll::-webkit-scrollbar {
+        width: 4px;
+    }
+    .thin-scroll {
+        scrollbar-width: thin;
+    }
 }

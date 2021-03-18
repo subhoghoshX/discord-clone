@@ -30,7 +30,7 @@ export default function Home() {
           <Header />
           <div className="grid grid-cols-[auto,250px] flex-grow overflow-hidden">
             <ChatBox />
-            <section className="bg-gray-800 h-full flex-grow overflow-auto">
+            <section className="bg-gray-800 h-full flex-grow overflow-auto styled-scroll thin-scroll">
               <Member />
             </section>
           </div>
