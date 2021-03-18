@@ -28,7 +28,7 @@ export default function Home() {
 
         <div className="h-full bg-[#36393F] flex flex-col overflow-hidden">
           <Header />
-          <div className="grid grid-cols-[auto,250px] flex-grow overflow-hidden">
+          <div className="grid grid-cols-[auto,240px] flex-grow overflow-hidden">
             <ChatBox />
             <section className="bg-gray-800 h-full flex-grow overflow-auto styled-scroll thin-scroll">
               <Member />

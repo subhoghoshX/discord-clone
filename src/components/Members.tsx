@@ -2,7 +2,7 @@ import data from '../data';
 
 export default function Member() {
     return (
-        <div className="space-y-3.5 py-8">
+        <div className="space-y-3.5 py-6">
             {data.map(({ username, profBg }, index) => (
                 <div className="flex items-center space-x-2 pl-5 pr-4">
                     <span className={`h-8 w-8 flex justify-center items-center rounded-full ${profBg}`}>
