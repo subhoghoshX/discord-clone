@@ -5,6 +5,7 @@ import ChannelColumn from '../components/ChannelColumn';
 import { ChannelBtn } from '../components/ChannelBtn';
 import Header from '../components/Header';
 import ChatBox from '../components/ChatBox';
+import Member from '../components/Members';
 
 export default function Home() {
   useEffect(() => {
@@ -29,7 +30,9 @@ export default function Home() {
           <Header />
           <div className="grid grid-cols-[auto,250px] flex-grow overflow-hidden">
             <ChatBox />
-            <section className="bg-gray-800 h-full">some content</section>
+            <section className="bg-gray-800 h-full flex-grow overflow-auto">
+              <Member />
+            </section>
           </div>
         </div>
       </div>
