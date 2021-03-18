@@ -4,6 +4,7 @@ import ServerColumn from '../components/ServerColumn';
 import ChannelColumn from '../components/ChannelColumn';
 import { ChannelBtn } from '../components/ChannelBtn';
 import Header from '../components/Header';
+import ChatBox from '../components/ChatBox';
 
 export default function Home() {
   useEffect(() => {
@@ -24,8 +25,12 @@ export default function Home() {
         <ServerColumn />
         <ChannelColumn />
 
-        <div className="h-full bg-gray-700">
+        <div className="h-full bg-[#36393F] flex flex-col overflow-hidden">
           <Header />
+          <div className="grid grid-cols-[auto,250px] flex-grow overflow-hidden">
+            <ChatBox />
+            <section className="bg-gray-800 h-full">some content</section>
+          </div>
         </div>
       </div>
 

@@ -1,7 +1,7 @@
 const colors = require('tailwindcss/colors');
 
 module.exports = {
-  purge: ['./src/pages/**/*.{js,ts,jsx,tsx}', './src/components/**/*.{js,ts,jsx,tsx}'],
+  purge: ['./src/pages/**/*.{js,ts,jsx,tsx}', './src/components/**/*.{js,ts,jsx,tsx}', './src/*.{js,ts,jsx,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
     colors: colors,
@@ -14,7 +14,7 @@ module.exports = {
         half: '50%'
       },
       fontFamily: {
-        'primary': ['Inter', 'ui-sans-serif', 'system-ui']
+        'primary': ['Open Sans', 'ui-sans-serif', 'system-ui']
       },
       colors: {
         transparent: 'transparent'

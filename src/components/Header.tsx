@@ -1,6 +1,6 @@
 export default function Header() {
     return (
-        <header className="h-12 flex items-center justify-between border-b border-gray-800 shadow px-4">
+        <header className="h-12 flex items-center justify-between border-b border-gray-800 shadow px-4 flex-shrink-0">
         <div className="flex items-center space-x-4">
             <span className="flex items-center space-x-1.5">
             <svg className="w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
