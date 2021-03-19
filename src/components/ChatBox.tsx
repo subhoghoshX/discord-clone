@@ -1,19 +1,12 @@
 import SingleMessage from "./SingleMessage";
 import data from '../data';
-import { useRef, useEffect, useState } from 'react';
+import { useState } from 'react';
+import InfiniteScroll from 'react-infinite-scroll-component';
+
+data.reverse();
 
 export default function ChatBox() {
-    const chatScrollEl = useRef<HTMLDivElement>();
-    const [messages, setMessages] = useState(data);
     const [message, setMessage] = useState('');
-
-    function scrollToBottom() {
-        chatScrollEl.current.scrollTop = chatScrollEl.current.scrollHeight;
-    }
-
-    useEffect(() => {
-        scrollToBottom();
-    }, [messages])
 
     function pushMessage(e) {
         if(e.keyCode === 13) {
@@ -23,18 +16,46 @@ export default function ChatBox() {
             const h: number = d.getHours();
             const m: number = d.getMinutes();
             const now: string = (h > 12) ? `${24 - 12} ${m}PM` : `${h} ${m}AM`
-            setMessages([...messages, { username: 'AZ', timestamp: `Today at ${now}`, message, profBg: 'bg-gray-500' }]);
+
+            setCurrent([{ username: 'AZ', timestamp: `Today at ${now}`, message, profBg: 'bg-gray-500' }, ...current]);
+            setUserMessageCount((currentCount) => currentCount + 1);
         }
+    }
+
+    const [userMessageCount, setUserMessageCount] = useState(0);
+    const [hasMore, setHasMore] = useState(true);
+    const [count, setCount] = useState({prev: 0, next: 10})
+    const [current, setCurrent] = useState(data.slice(count.prev, count.next));
+ 
+    function getMoreMessages() {
+        if(current.length === (data.length + userMessageCount)) {
+            setHasMore(false);
+            return;
+        }
+        setCurrent(current.concat(data.slice(count.prev + 10, count.next + 10)))
+        setCount((prevState) => ({prev: prevState.prev + 10, next: prevState.next + 10}))
     }
 
     return (
         <section className="flex flex-col overflow-hidden">
-            <div ref={chatScrollEl} className="overflow-auto styled-scroll">
-                <div className="flex-grow px-4 space-y-4 pb-10 pt-8">
-                    {messages.map((item, index) => (
+            <div id="myChatDiv" className="overflow-auto styled-scroll flex-grow 2xl:px-8 flex flex-col-reverse">
+                <InfiniteScroll
+                    dataLength={current.length}
+                    next={getMoreMessages}
+                    hasMore={hasMore}
+                    loader={<h4>Loading messages...</h4>}
+                    scrollableTarget="myChatDiv"
+                    style={{display: 'flex', flexDirection: 'column-reverse'}}
+                    inverse={true}
+                    className="px-4 space-y-4 pb-10 pt-3"
+                >
+                    {/* <div className="px-4 space-y-4 pb-10 pt-8"> */}  {/* wrapper around list does not work with InfiniteScroll */}
+                    {current.map((item, index) => (
                         <SingleMessage key={index} {...item} />
                     ))}
-                </div>
+                    {/* </div> */}
+
+                </InfiniteScroll>
 
             </div>
             <div className="h-[52px] flex-shrink-0 px-3">
