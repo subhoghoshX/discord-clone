@@ -1,19 +1,37 @@
 import SingleMessage from "./SingleMessage";
 import data from '../data';
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 
 export default function ChatBox() {
     const chatScrollEl = useRef<HTMLDivElement>();
+    const [messages, setMessages] = useState(data);
+    const [message, setMessage] = useState('');
+
+    function scrollToBottom() {
+        chatScrollEl.current.scrollTop = chatScrollEl.current.scrollHeight;
+    }
 
     useEffect(() => {
-        chatScrollEl.current.scrollTop = chatScrollEl.current.scrollHeight;
-    }, [])
+        scrollToBottom();
+    }, [messages])
+
+    function pushMessage(e) {
+        if(e.keyCode === 13) {
+            setMessage('');
+
+            const d = new Date();
+            const h: number = d.getHours();
+            const m: number = d.getMinutes();
+            const now: string = (h > 12) ? `${24 - 12} ${m}PM` : `${h} ${m}AM`
+            setMessages([...messages, { username: 'AZ', timestamp: `Today at ${now}`, message, profBg: 'bg-gray-500' }]);
+        }
+    }
 
     return (
         <section className="flex flex-col overflow-hidden">
             <div ref={chatScrollEl} className="overflow-auto styled-scroll">
                 <div className="flex-grow px-4 space-y-4 pb-10 pt-8">
-                    {data.map((item, index) => (
+                    {messages.map((item, index) => (
                         <SingleMessage key={index} {...item} />
                     ))}
                 </div>
@@ -26,7 +44,7 @@ export default function ChatBox() {
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clipRule="evenodd" />
                 </svg>
                 </button>
-                <input className="px-2 text-gray-100 bg-transparent focus:outline-none text-sm flex-grow" style={{caretColor: 'white'}} type="text" placeholder="Message #help"/>
+                <input onKeyUp={pushMessage} value={message} onChange={(e) => setMessage(e.target.value)} className="px-2 text-gray-100 bg-transparent focus:outline-none text-sm flex-grow" style={{caretColor: 'white'}} type="text" placeholder="Message #help"/>
                 <button className="px-2 focus:outline-none">
                 <svg className="h-6 w-6 text-gray-200 hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M5 5a3 3 0 015-2.236A3 3 0 0114.83 6H16a2 2 0 110 4h-5V9a1 1 0 10-2 0v1H4a2 2 0 110-4h1.17C5.06 5.687 5 5.35 5 5zm4 1V5a1 1 0 10-1 1h1zm3 0a1 1 0 10-1-1v1h1z" clipRule="evenodd" />
