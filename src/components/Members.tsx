@@ -1,6 +1,6 @@
 import data from '../data';
 
-export default function Member() {
+export default function Members() {
     return (
         <div className="space-y-3.5 py-6">
             {data.map(({ username, profBg }, index) => (
