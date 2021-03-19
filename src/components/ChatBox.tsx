@@ -1,10 +1,17 @@
 import SingleMessage from "./SingleMessage";
 import data from '../data';
+import { useRef, useEffect } from 'react';
 
 export default function ChatBox() {
+    const chatScrollEl = useRef<HTMLDivElement>();
+
+    useEffect(() => {
+        chatScrollEl.current.scrollTop = chatScrollEl.current.scrollHeight;
+    }, [])
+
     return (
         <section className="flex flex-col overflow-hidden">
-            <div className="overflow-auto styled-scroll">
+            <div ref={chatScrollEl} className="overflow-auto styled-scroll">
                 <div className="flex-grow px-4 space-y-4 pb-10 pt-8">
                     {data.map((item, index) => (
                         <SingleMessage key={index} {...item} />
