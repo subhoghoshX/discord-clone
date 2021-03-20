@@ -1,4 +1,11 @@
-export default [
+type Message = {
+    username: string;
+    timestamp: string;
+    message: string;
+    profBg: string;
+}
+
+const messages: Message[] =  [
     {
         username: 'Brad',
         timestamp: 'Today at 6:42 PM',
@@ -570,3 +577,5 @@ export default [
         profBg: 'bg-red-500'
     },
 ]
+
+export default messages;
