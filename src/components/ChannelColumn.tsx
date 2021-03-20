@@ -15,7 +15,7 @@ export default function ChannelColumn() {
             </svg>
           </button>
 
-          <div className="overflow-auto fancy-scroll">
+          <div className="overflow-auto flex-grow fancy-scroll">
             <div className="py-5 overflow-auto space-y-5">
               <section className="px-2 space-y-1">
                 <GenericBtn
