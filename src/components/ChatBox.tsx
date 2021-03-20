@@ -38,7 +38,7 @@ export default function ChatBox() {
 
     return (
         <section className="flex flex-col overflow-hidden">
-            <div id="myChatDiv" className="overflow-auto styled-scroll flex-grow 2xl:px-8 flex flex-col-reverse mb-4">
+            <div id="myChatDiv" className="overflow-auto styled-scroll flex-grow 2xl:px-8 flex flex-col-reverse mb-4 mr-1">
                 <InfiniteScroll
                     dataLength={current.length}
                     next={getMoreMessages}
