@@ -38,7 +38,7 @@ export default function ChatBox() {
 
     return (
         <section className="flex flex-col overflow-hidden">
-            <div id="myChatDiv" className="overflow-auto styled-scroll flex-grow 2xl:px-8 flex flex-col-reverse">
+            <div id="myChatDiv" className="overflow-auto styled-scroll flex-grow 2xl:px-8 flex flex-col-reverse mb-4">
                 <InfiniteScroll
                     dataLength={current.length}
                     next={getMoreMessages}
@@ -46,7 +46,7 @@ export default function ChatBox() {
                     loader={<h4>Loading messages...</h4>}
                     scrollableTarget="myChatDiv"
                     inverse={true}
-                    className="px-4 space-y-4 pb-10 pt-3 flex flex-col-reverse"
+                    className="px-4 space-y-4 pb-6 pt-3 flex flex-col-reverse"
                 >
                     {/* <div className="px-4 space-y-4 pb-10 pt-8"> */}  {/* wrapper around list does not work with InfiniteScroll */}
                     {current.map((item, index) => (
