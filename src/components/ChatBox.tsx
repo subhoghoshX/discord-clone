@@ -45,9 +45,8 @@ export default function ChatBox() {
                     hasMore={hasMore}
                     loader={<h4>Loading messages...</h4>}
                     scrollableTarget="myChatDiv"
-                    style={{display: 'flex', flexDirection: 'column-reverse'}}
                     inverse={true}
-                    className="px-4 space-y-4 pb-10 pt-3"
+                    className="px-4 space-y-4 pb-10 pt-3 flex flex-col-reverse"
                 >
                     {/* <div className="px-4 space-y-4 pb-10 pt-8"> */}  {/* wrapper around list does not work with InfiniteScroll */}
                     {current.map((item, index) => (
