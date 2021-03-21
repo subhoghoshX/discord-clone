@@ -1,4 +1,4 @@
-import {GenericBtn, ChannelBtn} from './ChannelBtn';
+import ChannelBtn from './ChannelBtn';
 
 export default function ChannelColumn() {
     return (
@@ -18,7 +18,7 @@ export default function ChannelColumn() {
           <div className="overflow-auto flex-grow fancy-scroll mr-0.5">
             <div className="py-5 overflow-auto space-y-5">
               <section className="px-2 space-y-1">
-                <GenericBtn
+                <ChannelBtn
                   leftIcon={
                     <svg className="h-5 w-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                       <path d="M1.5 15a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H13V2.5A1.5 1.5 0 0 0 11.5 1H11V.5a.5.5 0 0 0-.57-.495l-7 1A.5.5 0 0 0 3 1.5V15H1.5zM11 2h.5a.5.5 0 0 1 .5.5V15h-1V2zm-2.5 8c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1z"/>
@@ -26,7 +26,7 @@ export default function ChannelColumn() {
                   }
                   text="welcome"
                 />
-                <GenericBtn
+                <ChannelBtn
                   leftIcon={
                     <svg className="h-5 w-5 fill-current stroke-current text-gray-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                       <path fill="none" stroke="currentColor" strokeWidth="2" d="M11,15 C14,15 19,19 19,19 L19,3 C19,3 14,7 11,7 C11,7 11,15 11,15 Z M5,15 L8,23 L12,23 L9,15 M19,14 C20.657,14 22,12.657 22,11 C22,9.343 20.657,8 19,8 M11,19 C11.9999997,18.9999994 14,18 14,16 M2,11 C2,7.88888889 3.7912,7 6,7 L11,7 L11,15 L6,15 C3.7912,15 2,14.1111111 2,11 Z"/>
