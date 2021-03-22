@@ -2,7 +2,6 @@ import Head from 'next/head';
 import { useEffect } from 'react';
 import ServerColumn from '../components/ServerColumn';
 import ChannelColumn from '../components/ChannelColumn';
-import { ChannelBtn } from '../components/ChannelBtn';
 import Header from '../components/Header';
 import ChatBox from '../components/ChatBox';
 import Member from '../components/Members';
