@@ -4,7 +4,7 @@ import ServerColumn from '../components/ServerColumn';
 import ChannelColumn from '../components/ChannelColumn';
 import Header from '../components/Header';
 import ChatBox from '../components/ChatBox';
-import Member from '../components/Members';
+import Members from '../components/Members';
 
 export default function Home() {
   useEffect(() => {
@@ -30,7 +30,7 @@ export default function Home() {
           <div className="grid grid-cols-[auto,240px] flex-grow overflow-hidden">
             <ChatBox />
             <section className="bg-gray-800 h-full flex-grow overflow-auto styled-scroll thin-scroll">
-              <Member />
+              <Members />
             </section>
           </div>
         </div>
